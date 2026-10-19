@@ -26,14 +26,7 @@ export default function App() {
         {/* Next pages yahan add honge: About, Programs, Communities, Impact, Locations, Contact */}
       </main>
 
-      {/* floating donate button (SSSI jaisa) */}
-      <a
-        href={DONATE_URL}
-        className="float-donate"
-        style={{ background: C.gold, color: "#111" }}
-      >
-        Donate Now
-      </a>
+     
       <Footer />
     </>
   );

@@ -1,11 +1,11 @@
 import React from "react";
-import { C, DONATE_URL } from "../theme"; // Path apne hisaab se check kar lein
+import { C, DONATE_URL } from "../theme";
 
 export default function Footer() {
   return (
     <footer
       style={{
-        background: "#141b4a", // Deep dark blue matching the image
+        background: "#141b4a", 
         color: "#fff",
         padding: "40px 0 30px",
         fontFamily: "'Poppins', sans-serif",
@@ -15,38 +15,54 @@ export default function Footer() {
         style={{
           maxWidth: 1290,
           margin: "0 auto",
-          padding: "0 clamp(20px, 3vw, 36px)",
+          // Padding ko thora kam kiya taake content aur left/right chale jaye
+          padding: "0 auto", 
         }}
       >
         {/* ================= TOP ROW ================= */}
         <div
           style={{
             display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
+            justifyContent: "space-between", // Left text, Right button
             alignItems: "center",
-            gap: 20,
             paddingBottom: 24,
             borderBottom: "1px solid rgba(255,255,255,0.1)",
+            flexWrap: "wrap",
+            gap: 20,
           }}
         >
-          <p style={{ margin: 0, fontSize: 16, fontWeight: 500, color: "rgba(255,255,255,0.9)" }}>
+          {/* Left Text - Pushed to left */}
+          <p style={{ margin: 0, fontSize: 16, fontWeight: 500, color: "rgba(255,255,255,0.9)", textAlign: "left" }}>
             A New Haiti is a nonprofit organization.
           </p>
+          
+                   {/* Right Button - Floating banane ke liye */}
           <a
             href={DONATE_URL}
             style={{
+              // YEH 4 LINES BUTTON KO FLOATING BANATI HAIN 
+              position: "fixed",   
+              bottom: "100px",      // Screen ke neeche se 30px upar
+              right: "100px",       // Screen ke right se 30px andar
+              zIndex: 999,         // Taake baaki sab cheezon ke upar dikhe
+              
+              // Yeh aapki purani styling hai (colors, padding waghera)
               background: C.gold,
               color: "#141b4a",
-              padding: "10px 28px",
-              borderRadius: 8,
+              padding: "10px 32px", 
+              borderRadius: 8, 
               fontWeight: 700,
               fontSize: 15,
               textDecoration: "none",
-              transition: "transform 0.2s ease",
+              transition: "transform 0.2s ease, box-shadow 0.2s ease",
+              boxShadow: "0 8px 24px rgba(0,0,0,0.4)", // Shadow taake alag lage
             }}
-            onMouseEnter={(e) => e.target.style.transform = "translateY(-2px)"}
-            onMouseLeave={(e) => e.target.style.transform = "translateY(0)"}
+            onMouseEnter={(e) => {
+              e.target.style.transform = "translateY(-3px)";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.transform = "translateY(0)";
+            }}
           >
             Donate Now
           </a>
@@ -57,13 +73,13 @@ export default function Footer() {
           style={{
             display: "flex",
             flexWrap: "wrap",
-            justifyContent: "space-between",
+            justifyContent: "space-between", // Icons left, Copyright right
             alignItems: "center",
             gap: 20,
             paddingTop: 24,
           }}
         >
-          {/* Social Icons */}
+          {/* Social Icons - Pushed to left */}
           <div style={{ display: "flex", gap: 12 }}>
             {/* Facebook */}
             <a href="https://facebook.com" target="_blank" rel="noreferrer" style={iconStyle}>
@@ -104,7 +120,7 @@ export default function Footer() {
             </a>
           </div>
 
-          {/* Copyright Text */}
+          {/* Copyright Text - Pushed to right */}
           <p style={{ margin: 0, fontSize: 13, color: "rgba(255,255,255,0.6)", textAlign: "right" }}>
             &copy; {new Date().getFullYear()} A New Haiti. All rights reserved.
           </p>
