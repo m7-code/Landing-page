@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Poppins:wght@400;500;600&display=swap");
+@import "tailwindcss";
+
+:root {
+  --navy: #1f2a6b;
+  --navy-dark: #141b4a;
+  --gold: #f2b416;
+  --purple: #5b1a8c;
+  --cream: #f3fede;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Poppins", system-ui, sans-serif;
+  background: #fff;
+  -webkit-font-smoothing: antialiased;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* ---- nav ---- */
+.nav-link:hover {
+  color: var(--gold) !important;
+}
+
+.nav-cta {
+  display: inline-block;
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 17px;
+  padding: 18px 54px;
+  border-radius: 999px;
+  white-space: nowrap;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.nav-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(91, 26, 140, 0.35);
+}
+
+/* ---- hero buttons ---- */
+.hero-btn {
+  display: inline-block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 17px 44px;
+  border-radius: 999px;
+  text-align: center;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.hero-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* ---- floating donate ---- */
+.float-donate {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 90;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 12px 22px;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.3);
+  transition: transform 0.15s ease;
+}
+.float-donate:hover {
+  transform: translateY(-2px);
+}
+.vision-btn {
+  display: inline-block;
+  margin-top: 30px;
+  background: var(--purple);
+  color: #fff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  padding: 14px 34px;
+  border-radius: 999px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.vision-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(91, 26, 140, 0.35);
+}
+   .pillar-card {
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+   }
+   .pillar-card:hover {
+     transform: translateY(-5px);
+   }
+
+   /* fixed navbar ke neeche section ka title na chhupe */
+   section[id] {
+     scroll-margin-top: 110px !important;
+   }
+      .circle-card {
+     transition: transform 0.25s ease;
+   }
+   .circle-card:hover {
+     transform: translateY(-6px) scale(1.02);
+   }
+   
