@@ -8,6 +8,7 @@ import Impact from "./components/Impact";
 import Founder from "./components/Founder";
 import Locations from "./components/Locations";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -33,6 +34,7 @@ export default function App() {
       >
         Donate Now
       </a>
+      <Footer />
     </>
   );
 }
