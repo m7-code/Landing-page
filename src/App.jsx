@@ -5,7 +5,9 @@ import Vision from "./components/Vision";
 import Pillars from "./components/Pillars";
 import Communities from "./components/Communities";
 import Impact from "./components/Impact";
-
+import Founder from "./components/Founder";
+import Locations from "./components/Locations";
+import Contact from "./components/Contact";
 
 export default function App() {
   return (
@@ -17,6 +19,9 @@ export default function App() {
         <Pillars />
         <Communities />
         <Impact />
+         <Founder />
+         <Locations />
+         <Contact />
         {/* Next pages yahan add honge: About, Programs, Communities, Impact, Locations, Contact */}
       </main>
 
